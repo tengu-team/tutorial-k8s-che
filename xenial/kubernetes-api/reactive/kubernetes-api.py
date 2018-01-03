@@ -22,7 +22,8 @@ from charms.reactive import when, when_not, set_state, remove_state
 @when('dockerhost.available')
 @when_not('api.installed')
 def install_k8s_api(dockerhost):
-    if not conf['controller_ip'] or not conf['user'] or not conf['password']:
+    conf = hookenv.config()
+    if not conf['controller_ip'] or not conf['juju_user'] or not conf['juju_password']:
         status_set('blocked', 'Please fill in all configs')
         return
     unitdata.kv().set('docker-image-env', {
@@ -39,7 +40,6 @@ def install_k8s_api(dockerhost):
       'endpoint.available')
 @when_not('api.running')
 def configure_endpoint(dockerhost, endpoint):
-    conf = hookenv.config()
     log("Checking if container is running")
     containers = dockerhost.get_running_containers()  # Werkt dit als er meerdere docker image charms verbonden zijn?
     log(containers)
@@ -51,3 +51,4 @@ def configure_endpoint(dockerhost, endpoint):
         host = containers[unit_name]['host']
         endpoint.configure(port=port, hostname=host, private_address=host)
         set_state('api.running')
+
