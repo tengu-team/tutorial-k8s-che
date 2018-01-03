@@ -1,0 +1,40 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: {{name}}
+  namespace: {{namespace}}
+spec:
+  replicas: {{replicas}}
+  selector:
+    matchLabels:
+      {{juju_selector}}: {{uname}}
+      {{deployer_selector}}: {{deployer}}
+{%- if rolling == true %}
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+{%- endif %}
+  revisionHistoryLimit: 1
+  template:
+    metadata:
+      labels:
+        {{juju_selector}}: {{uname}}
+        {{deployer_selector}}: {{deployer}}
+    spec:
+      containers:
+      - name: {{uname}}
+        image: {{image}}
+        imagePullPolicy: Always
+{%- if env_vars %}
+        env:
+{%- for key in env_order %}
+        - name: {{key}}
+          value: "{{env_vars[key]}}"
+{%- endfor %}
+{%- endif %}
+{%- if imagesecret %}
+      imagePullSecrets:
+        - name: {{imagesecret}}
+{%- endif %}

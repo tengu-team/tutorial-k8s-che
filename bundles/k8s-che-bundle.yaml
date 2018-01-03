@@ -1,0 +1,127 @@
+﻿series: xenial
+applications:
+  easyrsa:
+    charm: 'cs:~containers/easyrsa-23'
+    num_units: 1
+    annotations:
+      gui-x: '450'
+      gui-y: '550'
+    to:
+      - '2'
+  kubernetes-worker:
+    charm: 'cs:~containers/kubernetes-worker-69'
+    num_units: 1
+    constraints: cores=4 mem=4096
+    expose: true
+    annotations:
+      gui-x: '100'
+      gui-y: '850'
+    to:
+      - '1'
+  etcd:
+    charm: 'cs:~containers/etcd-59'
+    num_units: 1
+    annotations:
+      gui-x: '800'
+      gui-y: '550'
+    to:
+      - '0'
+  kubernetes-master:
+    charm: 'cs:~containers/kubernetes-master-65'
+    num_units: 1
+    expose: true
+    annotations:
+      gui-x: '800'
+      gui-y: '850'
+    to:
+      - '0'
+  api:
+    charm: '../xenial/kubernetes-api'
+    series: xenial
+    num_units: 1
+    options:
+      controller_ip: '10.10.139.74:17070'
+      image: sborny/k8s-deployer
+      juju_password: #####
+      juju_user: #####
+      ports: '5000: "exposed"'
+    annotations:
+      gui-x: '1197.1651611328125'
+      gui-y: '851.1904602050781'
+    to:
+      - '4'
+  flannel:
+    charm: 'cs:~containers/flannel-35'
+    annotations:
+      gui-x: '450'
+      gui-y: '750'
+  deployer:
+    charm: '../xenial/kubernetes-deployer'
+    series: xenial
+    annotations:
+      gui-x: '1021.505126953125'
+      gui-y: '750.1790466308594'
+  eclipse-che:
+    charm: 'cs:eclipse-che-0'
+    num_units: 1
+    annotations:
+      gui-x: '1421.89404296875'
+      gui-y: '554.5939025878906'
+    to:
+      - '3'
+  haproxy:
+    charm: 'cs:haproxy-41'
+    num_units: 1
+    options:
+      services: |-
+        - service_name: api
+          service_host: 0.0.0.0
+          service_port: 5000
+          service_options: [balance leastconn, cookie SRVNAME insert]
+          server_options: maxconn 100 cookie S{i} check
+    annotations:
+      gui-x: '1199.326171875'
+      gui-y: '549.5384216308594'
+    to:
+      - '3'
+relations:
+  - - 'haproxy:reverseproxy'
+    - 'api:endpoint'
+  - - 'deployer:docker-image-host'
+    - 'api:dockerhost'
+  - - 'deployer:kube-host'
+    - 'kubernetes-master:kube-api-endpoint'
+  - - 'flannel:cni'
+    - 'kubernetes-worker:cni'
+  - - 'flannel:cni'
+    - 'kubernetes-master:cni'
+  - - 'flannel:etcd'
+    - 'etcd:db'
+  - - 'etcd:certificates'
+    - 'easyrsa:client'
+  - - 'kubernetes-worker:certificates'
+    - 'easyrsa:client'
+  - - 'kubernetes-master:kube-api-endpoint'
+    - 'kubernetes-worker:kube-api-endpoint'
+  - - 'kubernetes-master:kube-control'
+    - 'kubernetes-worker:kube-control'
+  - - 'kubernetes-master:certificates'
+    - 'easyrsa:client'
+  - - 'kubernetes-master:etcd'
+    - 'etcd:db'
+machines:
+  '0':
+    series: xenial
+    constraints: arch=amd64 root-disk=8192
+  '1':
+    series: xenial
+    constraints: arch=amd64 cpu-cores=4 mem=4096 root-disk=8192
+  '2':
+    series: xenial
+    constraints: arch=amd64 root-disk=8192
+  '3':
+    series: xenial
+    constraints: arch=amd64 root-disk=8192 mem=4096
+  '4':
+    series: xenial
+    constraints: arch=amd64 root-disk=8192

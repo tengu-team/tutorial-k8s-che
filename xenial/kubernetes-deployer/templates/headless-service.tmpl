@@ -1,0 +1,28 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: {{name}}
+  namespace: {{namespace}}
+  labels:
+    {{juju_selector}}: {{uname}}
+    {{deployer_selector}}: {{deployer}}
+spec:
+  clusterIP: "None"
+  ports:
+    - port: {{port}}
+---
+apiVersion: v1
+kind: Endpoints
+metadata:
+  name: {{name}}
+  namespace: {{namespace}}
+  labels:
+    {{juju_selector}}: {{uname}}
+    {{deployer_selector}}: {{deployer}}
+subsets:
+  - addresses:
+{%- for ip in ips %}
+      - ip: {{ip}}
+{%- endfor %}
+    ports:
+      - port: {{port}}

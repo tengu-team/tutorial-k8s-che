@@ -1,0 +1,13 @@
+"options":
+  "kubernetes-deployer": {}
+  "basic":
+    "use_venv": !!bool "false"
+    "packages": []
+    "include_system_packages": !!bool "false"
+"includes":
+- "layer:basic"
+- "interface:docker-image-host"
+- "interface:kubernetes-deployer"
+- "interface:http"
+"repo": "git@github.com:tengu-team/layer-kubernetes-deployer.git"
+"is": "kubernetes-deployer"

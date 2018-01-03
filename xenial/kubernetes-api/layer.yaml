@@ -1,0 +1,14 @@
+"options":
+  "docker-image": {}
+  "kubernetes-api": {}
+  "basic":
+    "use_venv": !!bool "false"
+    "packages": []
+    "include_system_packages": !!bool "false"
+"includes":
+- "layer:basic"
+- "interface:docker-image-host"
+- "layer:docker-image"
+- "interface:http"
+"repo": "git@github.com:tengu-team/layer-docker-image.git"
+"is": "kubernetes-api"

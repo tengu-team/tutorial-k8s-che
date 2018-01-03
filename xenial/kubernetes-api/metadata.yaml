@@ -1,0 +1,15 @@
+"name": "kubernetes-api"
+"summary": "REST api proxy for k8s"
+"maintainer": "Sander Borny <sander.borny@ugent.be>"
+"description": |
+  REST api proxy for k8s
+"tags": ["containers", "misc"]
+"series":
+- "xenial"
+"requires":
+  "dockerhost":
+    "interface": "docker-image-host"
+"provides":
+  "endpoint":
+    "interface": "http"
+"subordinate": !!bool "false"

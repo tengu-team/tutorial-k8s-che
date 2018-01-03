@@ -1,0 +1,45 @@
+"options":
+  "image":
+    "type": "string"
+    "default": ""
+    "description": "The default value will deploy the regular LimeDS docker image.\
+      \ If this refers to a docker image \nin a private repository, please provide\
+      \ the username and its corresponding secret.\n"
+  "username":
+    "type": "string"
+    "default": ""
+    "description": |
+      When the image is behind a private repository, this is the username to log into the docker repo.
+  "password":
+    "type": "string"
+    "default": ""
+    "description": |
+      When the image is behind a private repository, this is the password to log into the docker repo.
+  "ports":
+    "type": "string"
+    "default": ""
+    "description": |
+      This field is interpreted as key-value yaml. These ports are used by the image.
+      The key is a port number while the value indicates whether the port should be exposed.
+      When no values are set, a random port is exposed.
+
+      Example usage:
+      8080: "expose"
+      8443: ""
+  "docker-registry":
+    "type": "string"
+    "default": ""
+    "description": |-
+      Private Docker registry FQDN. Needed when the image is behind a private repository.
+  "controller_ip":
+    "type": "string"
+    "default": ""
+    "description": "Ip:port of the Juju controller"
+  "juju_user":
+    "type": "string"
+    "default": ""
+    "description": "Username of Juju user"
+  "juju_password":
+    "type": "string"
+    "default": ""
+    "description": "Password of Juju user"

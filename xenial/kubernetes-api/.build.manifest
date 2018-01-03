@@ -1,0 +1,342 @@
+{
+  "layers": [
+    "layer:basic", 
+    "layer:docker-image", 
+    "kubernetes-api", 
+    "interface:docker-image-host", 
+    "interface:http", 
+    "build"
+  ], 
+  "signatures": {
+    ".build.manifest": [
+      "build", 
+      "dynamic", 
+      "unchecked"
+    ], 
+    ".gitignore": [
+      "kubernetes-api", 
+      "static", 
+      "0a44bd2b8e7c35cfad385b8f440c3ec6ebcf8bd10248cf5925d2ceacc92f8078"
+    ], 
+    ".idea/layer-docker-image.iml": [
+      "layer:docker-image", 
+      "static", 
+      "799752ab7293c937fed99925c841d04c4426c5853f2da19407bbf1ed7a9a5ff0"
+    ], 
+    ".idea/layer-kubernetes-api.iml": [
+      "kubernetes-api", 
+      "static", 
+      "eac99a3d8b65962e0f105fee0867192518e754e3a92e0bebadd9d8adf13416fd"
+    ], 
+    ".idea/markdown-navigator.xml": [
+      "layer:docker-image", 
+      "static", 
+      "016239a82ae3c938cfd47076d46fe8ed646a3d7fc1f8af448d833b7922523dfa"
+    ], 
+    ".idea/markdown-navigator/profiles_settings.xml": [
+      "kubernetes-api", 
+      "static", 
+      "506e4c88669fc509a4e0b15f1d639262dda39e56b3239cbf9a8487a05c39a002"
+    ], 
+    ".idea/misc.xml": [
+      "kubernetes-api", 
+      "static", 
+      "7ac69be772a0b7d1b2367c2751b9409dba535005ce8ae4e358fa2aba1fc9f023"
+    ], 
+    ".idea/modules.xml": [
+      "kubernetes-api", 
+      "static", 
+      "2b4d27300a73b41f5594d93fd6f181b9ef0dcbd377115b805dac1b21f4547c69"
+    ], 
+    ".idea/vcs.xml": [
+      "layer:docker-image", 
+      "static", 
+      "55768f1f84fb117f1d0fc383e180b5d0aa5e5e6584c8c4a2995c15b4237f0972"
+    ], 
+    ".idea/workspace.xml": [
+      "kubernetes-api", 
+      "static", 
+      "9061873420b9ad70b2a40ba8dd0bca953ba6d14ae4da4420b4e9847cf09ee367"
+    ], 
+    "Makefile": [
+      "layer:basic", 
+      "static", 
+      "b7ab3a34e5faf79b96a8632039a0ad0aa87f2a9b5f0ba604e007cafb22190301"
+    ], 
+    "README.md": [
+      "kubernetes-api", 
+      "static", 
+      "12e02827b516d4983f158d7156e4c142500d013db14b972b091549cc4429cee4"
+    ], 
+    "bin/layer_option": [
+      "layer:basic", 
+      "static", 
+      "621b556cd208005e131e9f648859294347da9376609745a73ca2e808dd2032f9"
+    ], 
+    "config.yaml": [
+      "kubernetes-api", 
+      "dynamic", 
+      "005b098c4bf6113be6b25ff1b608d7619f3f32a2f42b4996965fe78ba475782b"
+    ], 
+    "copyright": [
+      "layer:basic", 
+      "static", 
+      "f6740d66fd60b60f2533d9fcb53907078d1e20920a0219afce7182e2a1c97629"
+    ], 
+    "hooks/config-changed": [
+      "layer:basic", 
+      "static", 
+      "f976e7ff3e347d44dac22626507f2a88042ba913aeebca7ffdcd5f6179b83683"
+    ], 
+    "hooks/dockerhost-relation-broken": [
+      "interface:docker-image-host", 
+      "dynamic", 
+      "f976e7ff3e347d44dac22626507f2a88042ba913aeebca7ffdcd5f6179b83683"
+    ], 
+    "hooks/dockerhost-relation-changed": [
+      "interface:docker-image-host", 
+      "dynamic", 
+      "f976e7ff3e347d44dac22626507f2a88042ba913aeebca7ffdcd5f6179b83683"
+    ], 
+    "hooks/dockerhost-relation-departed": [
+      "interface:docker-image-host", 
+      "dynamic", 
+      "f976e7ff3e347d44dac22626507f2a88042ba913aeebca7ffdcd5f6179b83683"
+    ], 
+    "hooks/dockerhost-relation-joined": [
+      "interface:docker-image-host", 
+      "dynamic", 
+      "f976e7ff3e347d44dac22626507f2a88042ba913aeebca7ffdcd5f6179b83683"
+    ], 
+    "hooks/endpoint-relation-broken": [
+      "interface:http", 
+      "dynamic", 
+      "f976e7ff3e347d44dac22626507f2a88042ba913aeebca7ffdcd5f6179b83683"
+    ], 
+    "hooks/endpoint-relation-changed": [
+      "interface:http", 
+      "dynamic", 
+      "f976e7ff3e347d44dac22626507f2a88042ba913aeebca7ffdcd5f6179b83683"
+    ], 
+    "hooks/endpoint-relation-departed": [
+      "interface:http", 
+      "dynamic", 
+      "f976e7ff3e347d44dac22626507f2a88042ba913aeebca7ffdcd5f6179b83683"
+    ], 
+    "hooks/endpoint-relation-joined": [
+      "interface:http", 
+      "dynamic", 
+      "f976e7ff3e347d44dac22626507f2a88042ba913aeebca7ffdcd5f6179b83683"
+    ], 
+    "hooks/hook.template": [
+      "layer:basic", 
+      "static", 
+      "f976e7ff3e347d44dac22626507f2a88042ba913aeebca7ffdcd5f6179b83683"
+    ], 
+    "hooks/install": [
+      "layer:basic", 
+      "static", 
+      "f976e7ff3e347d44dac22626507f2a88042ba913aeebca7ffdcd5f6179b83683"
+    ], 
+    "hooks/leader-elected": [
+      "layer:basic", 
+      "static", 
+      "f976e7ff3e347d44dac22626507f2a88042ba913aeebca7ffdcd5f6179b83683"
+    ], 
+    "hooks/leader-settings-changed": [
+      "layer:basic", 
+      "static", 
+      "f976e7ff3e347d44dac22626507f2a88042ba913aeebca7ffdcd5f6179b83683"
+    ], 
+    "hooks/relations/docker-image-host/README.md": [
+      "interface:docker-image-host", 
+      "static", 
+      "fcc7826727f283e04b64deb44d0b3eef100f2df7068773656549c716ae657293"
+    ], 
+    "hooks/relations/docker-image-host/__init__.py": [
+      "interface:docker-image-host", 
+      "static", 
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ], 
+    "hooks/relations/docker-image-host/interface.yaml": [
+      "interface:docker-image-host", 
+      "static", 
+      "4fca7d774c4072c7edc870525080d4e3839ca07aa6c7637208c74452a2370307"
+    ], 
+    "hooks/relations/docker-image-host/provides.py": [
+      "interface:docker-image-host", 
+      "static", 
+      "7c2467be05a8e9ee7fdfe29af413c112d272bff933631bfa85669809b1cf021d"
+    ], 
+    "hooks/relations/docker-image-host/requires.py": [
+      "interface:docker-image-host", 
+      "static", 
+      "f91f2dc57f93c6b0ba3310e573f94b9245490ff7c2f7e80af4256bb7ccffbe3b"
+    ], 
+    "hooks/relations/http/README.md": [
+      "interface:http", 
+      "static", 
+      "9c95320ad040745374fc03e972077f52c27e07eb0386ec93ae19bd50dca24c0d"
+    ], 
+    "hooks/relations/http/__init__.py": [
+      "interface:http", 
+      "static", 
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ], 
+    "hooks/relations/http/interface.yaml": [
+      "interface:http", 
+      "static", 
+      "d0b64038b85b7791ee4f3a42d73ffc8c208f206f73f899cbf33a519d12f9ad13"
+    ], 
+    "hooks/relations/http/provides.py": [
+      "interface:http", 
+      "static", 
+      "c6e16d6c0d80009aab33c51cb1e196f959df155ac656f47fe7104484859d2476"
+    ], 
+    "hooks/relations/http/requires.py": [
+      "interface:http", 
+      "static", 
+      "70188554d673bff61578f4e601a78a91efb4736df727507e984be5ca19335f82"
+    ], 
+    "hooks/start": [
+      "layer:basic", 
+      "static", 
+      "f976e7ff3e347d44dac22626507f2a88042ba913aeebca7ffdcd5f6179b83683"
+    ], 
+    "hooks/stop": [
+      "layer:basic", 
+      "static", 
+      "f976e7ff3e347d44dac22626507f2a88042ba913aeebca7ffdcd5f6179b83683"
+    ], 
+    "hooks/update-status": [
+      "layer:basic", 
+      "static", 
+      "f976e7ff3e347d44dac22626507f2a88042ba913aeebca7ffdcd5f6179b83683"
+    ], 
+    "hooks/upgrade-charm": [
+      "layer:basic", 
+      "static", 
+      "8fb6559bf4d4b7cdf1b857564c1d7265df98e863a4746fcbae092f141e59d97e"
+    ], 
+    "icon.svg": [
+      "layer:docker-image", 
+      "static", 
+      "8ba57b145b786ba636ab501da564915e11d650e7df21ab79584e0b598c631aa9"
+    ], 
+    "layer.yaml": [
+      "kubernetes-api", 
+      "dynamic", 
+      "cbf3be4cac0748f7ee6423a7f0a6ae72939885bb63017ec10d7bdff0d19b5974"
+    ], 
+    "lib/charms/layer/__init__.py": [
+      "layer:basic", 
+      "static", 
+      "71a8b901f7e64a6b1b61959fc25819bafc9c9905e37a918615b9f949295095a4"
+    ], 
+    "lib/charms/layer/basic.py": [
+      "layer:basic", 
+      "static", 
+      "d09706ef3a224eb60d34366a2867c382791aa30157ab5b77eda37f29731df2e2"
+    ], 
+    "lib/charms/layer/execd.py": [
+      "layer:basic", 
+      "static", 
+      "fda8bd491032db1db8ddaf4e99e7cc878c6fb5432efe1f91cadb5b34765d076d"
+    ], 
+    "metadata.yaml": [
+      "kubernetes-api", 
+      "dynamic", 
+      "c75264b6520bbc4e3245a76a176617b4c2b09a691bfc0542372331d47df6ad9a"
+    ], 
+    "reactive/__init__.py": [
+      "layer:basic", 
+      "static", 
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ], 
+    "reactive/docker-image.py": [
+      "layer:docker-image", 
+      "static", 
+      "bf11bdb07277fdcbba1ada080a068766b82639194d81fb2de577a5d14a0ee169"
+    ], 
+    "reactive/kubernetes-api.py": [
+      "kubernetes-api", 
+      "static", 
+      "860aa2765d166355bb48c48617eb3fc8fb80adfb2866c6e68701dedcc9f4c260"
+    ], 
+    "requirements.txt": [
+      "layer:basic", 
+      "static", 
+      "0f1c70d27e26005a96d66ad54482877ae20f7737693c833e29dd72bd6ac24892"
+    ], 
+    "test": [
+      "layer:docker-image", 
+      "static", 
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ], 
+    "tests/10-deploy.py": [
+      "layer:docker-image", 
+      "static", 
+      "caff299e91757be56fdb20f39cd9f1f74e387e42a2af2c06dc4ef19260f58dba"
+    ], 
+    "tests/tests.yaml": [
+      "layer:docker-image", 
+      "static", 
+      "a70cc17c38d1f3bc58dafab50fd218257b5c758da6941391414bc9e9dc956dbc"
+    ], 
+    "tox.ini": [
+      "layer:basic", 
+      "static", 
+      "00b57a776ac313e92a52daa05d1fdb6056c21b3105b643d32610fd937664321b"
+    ], 
+    "wheelhouse/Jinja2-2.10.tar.gz": [
+      "layer:basic", 
+      "dynamic", 
+      "f84be1bb0040caca4cea721fcbbbbd61f9be9464ca236387158b0feea01914a4"
+    ], 
+    "wheelhouse/MarkupSafe-1.0.tar.gz": [
+      "layer:basic", 
+      "dynamic", 
+      "a6be69091dac236ea9c6bc7d012beab42010fa914c459791d627dad4910eb665"
+    ], 
+    "wheelhouse/PyYAML-3.12.tar.gz": [
+      "layer:basic", 
+      "dynamic", 
+      "592766c6303207a20efc445587778322d7f73b161bd994f227adaa341ba212ab"
+    ], 
+    "wheelhouse/Tempita-0.5.2.tar.gz": [
+      "layer:basic", 
+      "dynamic", 
+      "cacecf0baa674d356641f1d406b8bff1d756d739c46b869a54de515d08e6fc9c"
+    ], 
+    "wheelhouse/charmhelpers-0.18.3.tar.gz": [
+      "layer:basic", 
+      "dynamic", 
+      "88a2be48ab939beaa612c3f8565a3a3f75a0ee46533f143a2bb6323bbfcb0d93"
+    ], 
+    "wheelhouse/charms.reactive-0.5.0.tar.gz": [
+      "layer:basic", 
+      "dynamic", 
+      "4df8e4c0052b0d46ec8a17dc724faa98169a879752eee78dc07d0f6a0a80837e"
+    ], 
+    "wheelhouse/netaddr-0.7.19.tar.gz": [
+      "layer:basic", 
+      "dynamic", 
+      "38aeec7cdd035081d3a4c306394b19d677623bf76fa0913f6695127c7753aefd"
+    ], 
+    "wheelhouse/pip-8.1.2.tar.gz": [
+      "layer:basic", 
+      "dynamic", 
+      "4d24b03ffa67638a3fa931c09fd9e0273ffa904e95ebebe7d4b1a54c93d7b732"
+    ], 
+    "wheelhouse/pyaml-17.10.0.tar.gz": [
+      "layer:basic", 
+      "dynamic", 
+      "a9a3e83372072fc7dc1aebcab37d6f2e08fb8066f553f31d6fc9cb2ad0b515d3"
+    ], 
+    "wheelhouse/six-1.11.0.tar.gz": [
+      "layer:basic", 
+      "dynamic", 
+      "70e8a77beed4562e7f14fe23a786b54f6296e34344c23bc42f07b15018ff98e9"
+    ]
+  }
+}

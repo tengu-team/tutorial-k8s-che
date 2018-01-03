@@ -1,0 +1,452 @@
+{
+  "layers": [
+    "layer:basic", 
+    "kubernetes-deployer", 
+    "interface:docker-image-host", 
+    "interface:kubernetes-deployer", 
+    "interface:http", 
+    "build"
+  ], 
+  "signatures": {
+    ".build.manifest": [
+      "build", 
+      "dynamic", 
+      "unchecked"
+    ], 
+    ".gitignore": [
+      "kubernetes-deployer", 
+      "static", 
+      "0a44bd2b8e7c35cfad385b8f440c3ec6ebcf8bd10248cf5925d2ceacc92f8078"
+    ], 
+    ".idea/layer-kubernetes-deployer.iml": [
+      "kubernetes-deployer", 
+      "static", 
+      "cbc2659732ff53158d5812a825e89691173217e1748403f0989bd8f783616fb2"
+    ], 
+    ".idea/markdown-navigator.xml": [
+      "kubernetes-deployer", 
+      "static", 
+      "016239a82ae3c938cfd47076d46fe8ed646a3d7fc1f8af448d833b7922523dfa"
+    ], 
+    ".idea/markdown-navigator/profiles_settings.xml": [
+      "kubernetes-deployer", 
+      "static", 
+      "506e4c88669fc509a4e0b15f1d639262dda39e56b3239cbf9a8487a05c39a002"
+    ], 
+    ".idea/misc.xml": [
+      "kubernetes-deployer", 
+      "static", 
+      "18e33683380b6d037f18bb498e86114bc8bca5e963f1d55233c9f0e62c10631c"
+    ], 
+    ".idea/modules.xml": [
+      "kubernetes-deployer", 
+      "static", 
+      "9afb51e0f932e6312f1c77fd8c3d0bcfeb4f01e96e3bdcb78dcf4439fd84e569"
+    ], 
+    ".idea/vcs.xml": [
+      "kubernetes-deployer", 
+      "static", 
+      "55768f1f84fb117f1d0fc383e180b5d0aa5e5e6584c8c4a2995c15b4237f0972"
+    ], 
+    ".idea/workspace.xml": [
+      "kubernetes-deployer", 
+      "static", 
+      "af52a098fb9d3f10e563ae8c6f450a69ba333aff75bc45af5779e5ad445da1b5"
+    ], 
+    "Makefile": [
+      "layer:basic", 
+      "static", 
+      "b7ab3a34e5faf79b96a8632039a0ad0aa87f2a9b5f0ba604e007cafb22190301"
+    ], 
+    "README.md": [
+      "kubernetes-deployer", 
+      "static", 
+      "25185b96787b8a259dbb69b034fa214970dfb961030a7c9ce693f6bff7a32220"
+    ], 
+    "bin/layer_option": [
+      "layer:basic", 
+      "static", 
+      "621b556cd208005e131e9f648859294347da9376609745a73ca2e808dd2032f9"
+    ], 
+    "config.yaml": [
+      "kubernetes-deployer", 
+      "dynamic", 
+      "04bab60de4dc588d1d3a497bc81486940c33b198d18364c62ca20575e9ce6ab6"
+    ], 
+    "copyright": [
+      "layer:basic", 
+      "static", 
+      "f6740d66fd60b60f2533d9fcb53907078d1e20920a0219afce7182e2a1c97629"
+    ], 
+    "hooks/config-changed": [
+      "layer:basic", 
+      "static", 
+      "f976e7ff3e347d44dac22626507f2a88042ba913aeebca7ffdcd5f6179b83683"
+    ], 
+    "hooks/docker-image-host-relation-broken": [
+      "interface:docker-image-host", 
+      "dynamic", 
+      "f976e7ff3e347d44dac22626507f2a88042ba913aeebca7ffdcd5f6179b83683"
+    ], 
+    "hooks/docker-image-host-relation-changed": [
+      "interface:docker-image-host", 
+      "dynamic", 
+      "f976e7ff3e347d44dac22626507f2a88042ba913aeebca7ffdcd5f6179b83683"
+    ], 
+    "hooks/docker-image-host-relation-departed": [
+      "interface:docker-image-host", 
+      "dynamic", 
+      "f976e7ff3e347d44dac22626507f2a88042ba913aeebca7ffdcd5f6179b83683"
+    ], 
+    "hooks/docker-image-host-relation-joined": [
+      "interface:docker-image-host", 
+      "dynamic", 
+      "f976e7ff3e347d44dac22626507f2a88042ba913aeebca7ffdcd5f6179b83683"
+    ], 
+    "hooks/hook.template": [
+      "layer:basic", 
+      "static", 
+      "f976e7ff3e347d44dac22626507f2a88042ba913aeebca7ffdcd5f6179b83683"
+    ], 
+    "hooks/install": [
+      "layer:basic", 
+      "static", 
+      "f976e7ff3e347d44dac22626507f2a88042ba913aeebca7ffdcd5f6179b83683"
+    ], 
+    "hooks/kube-host-relation-broken": [
+      "interface:http", 
+      "dynamic", 
+      "f976e7ff3e347d44dac22626507f2a88042ba913aeebca7ffdcd5f6179b83683"
+    ], 
+    "hooks/kube-host-relation-changed": [
+      "interface:http", 
+      "dynamic", 
+      "f976e7ff3e347d44dac22626507f2a88042ba913aeebca7ffdcd5f6179b83683"
+    ], 
+    "hooks/kube-host-relation-departed": [
+      "interface:http", 
+      "dynamic", 
+      "f976e7ff3e347d44dac22626507f2a88042ba913aeebca7ffdcd5f6179b83683"
+    ], 
+    "hooks/kube-host-relation-joined": [
+      "interface:http", 
+      "dynamic", 
+      "f976e7ff3e347d44dac22626507f2a88042ba913aeebca7ffdcd5f6179b83683"
+    ], 
+    "hooks/kubernetes-deployer-relation-broken": [
+      "interface:kubernetes-deployer", 
+      "dynamic", 
+      "f976e7ff3e347d44dac22626507f2a88042ba913aeebca7ffdcd5f6179b83683"
+    ], 
+    "hooks/kubernetes-deployer-relation-changed": [
+      "interface:kubernetes-deployer", 
+      "dynamic", 
+      "f976e7ff3e347d44dac22626507f2a88042ba913aeebca7ffdcd5f6179b83683"
+    ], 
+    "hooks/kubernetes-deployer-relation-departed": [
+      "interface:kubernetes-deployer", 
+      "dynamic", 
+      "f976e7ff3e347d44dac22626507f2a88042ba913aeebca7ffdcd5f6179b83683"
+    ], 
+    "hooks/kubernetes-deployer-relation-joined": [
+      "interface:kubernetes-deployer", 
+      "dynamic", 
+      "f976e7ff3e347d44dac22626507f2a88042ba913aeebca7ffdcd5f6179b83683"
+    ], 
+    "hooks/leader-elected": [
+      "layer:basic", 
+      "static", 
+      "f976e7ff3e347d44dac22626507f2a88042ba913aeebca7ffdcd5f6179b83683"
+    ], 
+    "hooks/leader-settings-changed": [
+      "layer:basic", 
+      "static", 
+      "f976e7ff3e347d44dac22626507f2a88042ba913aeebca7ffdcd5f6179b83683"
+    ], 
+    "hooks/relations/docker-image-host/README.md": [
+      "interface:docker-image-host", 
+      "static", 
+      "fcc7826727f283e04b64deb44d0b3eef100f2df7068773656549c716ae657293"
+    ], 
+    "hooks/relations/docker-image-host/__init__.py": [
+      "interface:docker-image-host", 
+      "static", 
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ], 
+    "hooks/relations/docker-image-host/interface.yaml": [
+      "interface:docker-image-host", 
+      "static", 
+      "4fca7d774c4072c7edc870525080d4e3839ca07aa6c7637208c74452a2370307"
+    ], 
+    "hooks/relations/docker-image-host/provides.py": [
+      "interface:docker-image-host", 
+      "static", 
+      "7c2467be05a8e9ee7fdfe29af413c112d272bff933631bfa85669809b1cf021d"
+    ], 
+    "hooks/relations/docker-image-host/requires.py": [
+      "interface:docker-image-host", 
+      "static", 
+      "f91f2dc57f93c6b0ba3310e573f94b9245490ff7c2f7e80af4256bb7ccffbe3b"
+    ], 
+    "hooks/relations/http/README.md": [
+      "interface:http", 
+      "static", 
+      "9c95320ad040745374fc03e972077f52c27e07eb0386ec93ae19bd50dca24c0d"
+    ], 
+    "hooks/relations/http/__init__.py": [
+      "interface:http", 
+      "static", 
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ], 
+    "hooks/relations/http/interface.yaml": [
+      "interface:http", 
+      "static", 
+      "d0b64038b85b7791ee4f3a42d73ffc8c208f206f73f899cbf33a519d12f9ad13"
+    ], 
+    "hooks/relations/http/provides.py": [
+      "interface:http", 
+      "static", 
+      "c6e16d6c0d80009aab33c51cb1e196f959df155ac656f47fe7104484859d2476"
+    ], 
+    "hooks/relations/http/requires.py": [
+      "interface:http", 
+      "static", 
+      "70188554d673bff61578f4e601a78a91efb4736df727507e984be5ca19335f82"
+    ], 
+    "hooks/relations/kubernetes-deployer/.gitignore": [
+      "interface:kubernetes-deployer", 
+      "static", 
+      "0a44bd2b8e7c35cfad385b8f440c3ec6ebcf8bd10248cf5925d2ceacc92f8078"
+    ], 
+    "hooks/relations/kubernetes-deployer/.idea/kubernetes-deployer.iml": [
+      "interface:kubernetes-deployer", 
+      "static", 
+      "e869e83f143a805ebd06d76928ade69a01f0aa6cc98259946bd888e63543a3a7"
+    ], 
+    "hooks/relations/kubernetes-deployer/.idea/markdown-navigator.xml": [
+      "interface:kubernetes-deployer", 
+      "static", 
+      "016239a82ae3c938cfd47076d46fe8ed646a3d7fc1f8af448d833b7922523dfa"
+    ], 
+    "hooks/relations/kubernetes-deployer/.idea/markdown-navigator/profiles_settings.xml": [
+      "interface:kubernetes-deployer", 
+      "static", 
+      "506e4c88669fc509a4e0b15f1d639262dda39e56b3239cbf9a8487a05c39a002"
+    ], 
+    "hooks/relations/kubernetes-deployer/.idea/misc.xml": [
+      "interface:kubernetes-deployer", 
+      "static", 
+      "18e33683380b6d037f18bb498e86114bc8bca5e963f1d55233c9f0e62c10631c"
+    ], 
+    "hooks/relations/kubernetes-deployer/.idea/modules.xml": [
+      "interface:kubernetes-deployer", 
+      "static", 
+      "9c17b7c8492cf917f0cb80b51def5123bbd83ca1869928dd5c8e55ce3ff3d35e"
+    ], 
+    "hooks/relations/kubernetes-deployer/.idea/workspace.xml": [
+      "interface:kubernetes-deployer", 
+      "static", 
+      "400adb81687f88e169e7224463ee0e39a35e9390007166fdd8e4e37a61ea8586"
+    ], 
+    "hooks/relations/kubernetes-deployer/README.md": [
+      "interface:kubernetes-deployer", 
+      "static", 
+      "71408afeecfcffb39b5fcc559a41258d200c132bba08961d532de35209527abb"
+    ], 
+    "hooks/relations/kubernetes-deployer/__init__.py": [
+      "interface:kubernetes-deployer", 
+      "static", 
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ], 
+    "hooks/relations/kubernetes-deployer/interface.yaml": [
+      "interface:kubernetes-deployer", 
+      "static", 
+      "8818caf31f43fa3f4ca167003a8de1882feb7bd1f16e7f927b957f4471628f9b"
+    ], 
+    "hooks/relations/kubernetes-deployer/provides.py": [
+      "interface:kubernetes-deployer", 
+      "static", 
+      "3cc677c446771c7a426e226c9b5cda690c94ab59445c8a605aa2e1fa3839a8d2"
+    ], 
+    "hooks/relations/kubernetes-deployer/requires.py": [
+      "interface:kubernetes-deployer", 
+      "static", 
+      "d9216753d1dc8b39b4c55670dfd3c02970b11aff5869e0b7167c4c4a64636962"
+    ], 
+    "hooks/start": [
+      "layer:basic", 
+      "static", 
+      "f976e7ff3e347d44dac22626507f2a88042ba913aeebca7ffdcd5f6179b83683"
+    ], 
+    "hooks/stop": [
+      "layer:basic", 
+      "static", 
+      "f976e7ff3e347d44dac22626507f2a88042ba913aeebca7ffdcd5f6179b83683"
+    ], 
+    "hooks/update-status": [
+      "layer:basic", 
+      "static", 
+      "f976e7ff3e347d44dac22626507f2a88042ba913aeebca7ffdcd5f6179b83683"
+    ], 
+    "hooks/upgrade-charm": [
+      "layer:basic", 
+      "static", 
+      "8fb6559bf4d4b7cdf1b857564c1d7265df98e863a4746fcbae092f141e59d97e"
+    ], 
+    "icon.svg": [
+      "kubernetes-deployer", 
+      "static", 
+      "12d0f3295b7f71e3379537dd3569f16f1b4764e5057e6ddd757659edf2fb3489"
+    ], 
+    "layer.yaml": [
+      "kubernetes-deployer", 
+      "dynamic", 
+      "48635f66cc1d12c940eb818a1efdfe70517e1f424a189039ef0afb7ff4e3efc1"
+    ], 
+    "lib/charms/layer/__init__.py": [
+      "layer:basic", 
+      "static", 
+      "71a8b901f7e64a6b1b61959fc25819bafc9c9905e37a918615b9f949295095a4"
+    ], 
+    "lib/charms/layer/basic.py": [
+      "layer:basic", 
+      "static", 
+      "d09706ef3a224eb60d34366a2867c382791aa30157ab5b77eda37f29731df2e2"
+    ], 
+    "lib/charms/layer/execd.py": [
+      "layer:basic", 
+      "static", 
+      "fda8bd491032db1db8ddaf4e99e7cc878c6fb5432efe1f91cadb5b34765d076d"
+    ], 
+    "lib/charms/layer/k8shelpers.py": [
+      "kubernetes-deployer", 
+      "static", 
+      "47af4215ddaf9b8f60580f1410fe74eb9d7bd8ce10a0bf765503a6ef7c271528"
+    ], 
+    "lib/charms/layer/resourcefactory.py": [
+      "kubernetes-deployer", 
+      "static", 
+      "d3c90f10ec5bdbdfa6d26b42d8fdbf76102a3378e26c54046741047c9768f8a6"
+    ], 
+    "metadata.yaml": [
+      "kubernetes-deployer", 
+      "dynamic", 
+      "c724a360998fb0f131c756050f6ff7224bd57289f15fc74e8d612fe0c287dd4b"
+    ], 
+    "reactive/__init__.py": [
+      "layer:basic", 
+      "static", 
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ], 
+    "reactive/kubernetes-deployer.py": [
+      "kubernetes-deployer", 
+      "static", 
+      "6089bb7f438795fa0bb5fde57291ceb74c5eaf3d6111cebdc61e0d92dbc239db"
+    ], 
+    "requirements.txt": [
+      "layer:basic", 
+      "static", 
+      "0f1c70d27e26005a96d66ad54482877ae20f7737693c833e29dd72bd6ac24892"
+    ], 
+    "templates/deployment.tmpl": [
+      "kubernetes-deployer", 
+      "static", 
+      "326c302b05e0f52941cd1cc9dec9c99ccbfb5e1909db2b733ad75f09d1b72a18"
+    ], 
+    "templates/headless-service.tmpl": [
+      "kubernetes-deployer", 
+      "static", 
+      "1a5075d705bf84591d869f7ca0d346f70b3b3ffa536d3c675bcc85d82117ba8d"
+    ], 
+    "templates/namespace.tmpl": [
+      "kubernetes-deployer", 
+      "static", 
+      "e9cabffe16aa2a7966241374c715745e8601dfdafa69a565e60eb8bb0b65e9c7"
+    ], 
+    "templates/network-policy.tmpl": [
+      "kubernetes-deployer", 
+      "static", 
+      "b2a0b0507c6358b46b788c5c73960a5b0884b1cef92198192450630ee96eb017"
+    ], 
+    "templates/service.tmpl": [
+      "kubernetes-deployer", 
+      "static", 
+      "b78d199c9e913e9f526b7d64850dc7e3253229ff910ebe911494e620d1a88013"
+    ], 
+    "tox.ini": [
+      "layer:basic", 
+      "static", 
+      "00b57a776ac313e92a52daa05d1fdb6056c21b3105b643d32610fd937664321b"
+    ], 
+    "wheelhouse/Jinja2-2.10.tar.gz": [
+      "layer:basic", 
+      "dynamic", 
+      "f84be1bb0040caca4cea721fcbbbbd61f9be9464ca236387158b0feea01914a4"
+    ], 
+    "wheelhouse/MarkupSafe-1.0.tar.gz": [
+      "layer:basic", 
+      "dynamic", 
+      "a6be69091dac236ea9c6bc7d012beab42010fa914c459791d627dad4910eb665"
+    ], 
+    "wheelhouse/PyYAML-3.12.tar.gz": [
+      "kubernetes-deployer", 
+      "dynamic", 
+      "592766c6303207a20efc445587778322d7f73b161bd994f227adaa341ba212ab"
+    ], 
+    "wheelhouse/Tempita-0.5.2.tar.gz": [
+      "layer:basic", 
+      "dynamic", 
+      "cacecf0baa674d356641f1d406b8bff1d756d739c46b869a54de515d08e6fc9c"
+    ], 
+    "wheelhouse/charmhelpers-0.18.3.tar.gz": [
+      "layer:basic", 
+      "dynamic", 
+      "88a2be48ab939beaa612c3f8565a3a3f75a0ee46533f143a2bb6323bbfcb0d93"
+    ], 
+    "wheelhouse/charms.reactive-0.5.0.tar.gz": [
+      "layer:basic", 
+      "dynamic", 
+      "4df8e4c0052b0d46ec8a17dc724faa98169a879752eee78dc07d0f6a0a80837e"
+    ], 
+    "wheelhouse/jujubigdata-6.4.4.tar.gz": [
+      "kubernetes-deployer", 
+      "dynamic", 
+      "b3c3650ee41354220e7cc71a033588cca64a5a9b504bffd2490a6da2dd162924"
+    ], 
+    "wheelhouse/jujuresources-0.4.0.tar.gz": [
+      "kubernetes-deployer", 
+      "dynamic", 
+      "dbade544066885c2db48d18eca4512c89ca5c38c81ff8bd5b8ff228166dedb72"
+    ], 
+    "wheelhouse/netaddr-0.7.19.tar.gz": [
+      "layer:basic", 
+      "dynamic", 
+      "38aeec7cdd035081d3a4c306394b19d677623bf76fa0913f6695127c7753aefd"
+    ], 
+    "wheelhouse/path.py-10.5.tar.gz": [
+      "kubernetes-deployer", 
+      "dynamic", 
+      "63a7af08676668fd51750f111affbd38c1a13c61aba15c6665b16681771c79a8"
+    ], 
+    "wheelhouse/pip-8.1.2.tar.gz": [
+      "layer:basic", 
+      "dynamic", 
+      "4d24b03ffa67638a3fa931c09fd9e0273ffa904e95ebebe7d4b1a54c93d7b732"
+    ], 
+    "wheelhouse/pyaml-17.10.0.tar.gz": [
+      "kubernetes-deployer", 
+      "dynamic", 
+      "a9a3e83372072fc7dc1aebcab37d6f2e08fb8066f553f31d6fc9cb2ad0b515d3"
+    ], 
+    "wheelhouse/setuptools_scm-1.15.6.tar.gz": [
+      "kubernetes-deployer", 
+      "dynamic", 
+      "49ab4685589986a42da85706b3311a2f74f1af567d39fee6cb1e088d7a75fb5f"
+    ], 
+    "wheelhouse/six-1.11.0.tar.gz": [
+      "kubernetes-deployer", 
+      "dynamic", 
+      "70e8a77beed4562e7f14fe23a786b54f6296e34344c23bc42f07b15018ff98e9"
+    ]
+  }
+}
