@@ -71,9 +71,9 @@ services:
 Save the stack and create a workspace based on the newly created stack. 
 
 ## Step 5: Use Eclipse Che to create a project and deploy it to Kubernetes
-A dummy project is available in helloflask. This project sets up a very small Api with only one endpoint, namely `/ping`. If all is well, sending a GET request to this endpoint will result in a `pong` response.
+A dummy project is available in helloflask. This project sets up a very small API with only one endpoint, namely `/ping`. If all is well, sending a GET request to this endpoint will result in a `pong` response.
 
-The [tengu-cli](https://github.com/tengu-team/tengu-cli/tree/no-kubectl) is used to send deployment requests to an API running in Kubernetes. Assuming you are in the `/projects` directory and names the project `helloflask`, you can use the cli like this:
+The [tengu-cli](https://github.com/tengu-team/tengu-cli/tree/no-kubectl) is used to send deployment requests to an API running in Kubernetes. Assuming you are in the `/projects` directory and named the project `helloflask`, you can use the cli like this:
 ```
 # Log into docker
 docker login
