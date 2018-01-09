@@ -1,3 +1,4 @@
+
 # Demo k8s - che 
 
 The following steps are intended to set up a demo configuration between Eclipse Che and Kubernetes via Juju. The final outcome is a Eclipse Che workspace which can deploy a python script to Kubernetes. 
@@ -27,7 +28,9 @@ juju deploy k8s-che-bundle.yaml
 ```
 You can monitor the deployment with `watch -c juju status --color`. When all applications are active (except the haproxy charm which will stay "unkown") the deployment is done.
 
-## Step 2:  Upgrade Eclipse Che to the latest version
+## OPTIONAL Step 1.5:  Upgrade Eclipse Che to the latest version
+**Skip this step if your eclipse che uses at least version 6.0.0.**
+
 The Eclipse Che charm uses (at the time of writing) an older version. We'll upgrade to the latest build to get the newest features and bug fixes. 
 ```
 juju ssh eclipse-che/0
@@ -40,12 +43,19 @@ docker rmi $(docker images -q) # Remove all docker images
 IP="X.X.X.X"
 
 docker run -it --rm -v /var/run/docker.sock:/var/run/docker.sock -v /home/ubuntu/:/data -e CHE_HOST="$IP" -e CHE_DOCKER_IP_EXTERNAL="$IP" eclipse/che upgrade
+```
+## Step 2: Mount the docker unix socket for all workspaces
+The following command will cause Che to bind the docker socket in every workspace. We need this to access the docker daemon on the host.
+```
+juju ssh eclipse-che/0
 
-# The following command will cause Che to bind the docker socket in every workspace. We need this to access the docker daemon on the host.
-echo "che.workspace.volume=/var/run/docker.sock:/var/run/docker.sock" | sudo tee --append instance/config/che/che.properties
+echo "CHE_WORKSPACE_VOLUME=/var/run/docker.sock:/var/run/docker.sock" | sudo tee --append /home/ubuntu/che.env
 
-# Restart the Eclipse Che server
-docker run -it --rm -v /var/run/docker.sock:/var/run/docker.sock -v /home/ubuntu/:/data -e CHE_HOST="$IP" -e CHE_DOCKER_IP_EXTERNAL="$IP" eclipse/che restart
+# Restart Che
+# The next command uses the IP address of the machine. Find this via juju status or if you are on the VMware cluster you can also find it via ifconfig under the ens192 interface. 
+IP="X.X.X.X"
+CHE_VERSION="6.0.0-M4"  # Fill in the correct che version
+docker run -it --rm -v /var/run/docker.sock:/var/run/docker.sock -v /home/ubuntu/:/data -e CHE_HOST="$IP" -e CHE_DOCKER_IP_EXTERNAL="$IP" eclipse/che:$CHE_VERSION restart
 ```
 
 ## Step 3: Set docker unix socket permissions

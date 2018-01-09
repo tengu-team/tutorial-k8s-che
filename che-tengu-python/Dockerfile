@@ -12,7 +12,7 @@ RUN sudo apt-get install -y git && \
     git clone https://github.com/tengu-team/tengu-cli.git && \
     cd tengu-cli/ && \
     git checkout no-kubectl && \
-    sudo pip install -e . && \
+    sudo -H pip install -e . && \
     sudo mkdir -p /projects
 
 WORKDIR /projects
